@@ -1,0 +1,29 @@
+from djitellopy import Tello
+
+tello = Tello()
+
+tello.connect()
+
+# leg 1 take off 
+tello.takeoff()
+tello.move_up(102)
+tello.move_forward(152)
+tello.rotate_counter_clockwise(90)
+
+# leg 2 
+tello.move_forward(183)
+tello.rotate_clockwise(90)
+
+# leg 3
+tello.move_down(91)
+tello.move_forward(91)
+tello.rotate_clockwise(90)
+
+# leg 4
+tello.move_up(32)
+tello.move_forward(91)
+tello.rotate_counter_clockwise(90)
+
+#leg 5
+tello.move_forward(183)
+tello.land()
