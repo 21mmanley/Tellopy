@@ -1,0 +1,23 @@
+from djitellopy import Tello
+
+tello = Tello()
+
+tello.connect()
+
+# leg 1 takeoff 
+tello.takeoff()
+
+
+# leg 2 move up to 6ft
+tello.move_up(102)
+
+# leg 3 rotate 12 degrees counter clockwise
+tello.send_rc_control(0,0,0,-50)
+sleep(.33)
+
+# leg 4 move forword 436cm 
+tello.send_rc_control(0,50,0,0)
+sleep(29)
+
+# leg 5
+tello.land()
